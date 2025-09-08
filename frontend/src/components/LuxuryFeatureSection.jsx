@@ -47,7 +47,7 @@ const Node = ({ icon: Icon, label, desc, color }) => {
               )}
               style={{ perspective: 600 }}
               initial={{ rotateZ: 0, scale: 1 }}
-              animate={active ? { rotateZ: 15, scale: 1.08 } : { rotateZ: 0, scale: 1 }}
+              animate={active ? { rotateZ: 12, scale: 1.06 } : { rotateZ: 0, scale: 1 }}
               whileHover={{ rotateZ: 15, scale: 1.08 }}
               whileTap={{ rotateZ: 15, scale: 1.08 }}
               transition={{ type: "spring", stiffness: 220, damping: 18 }}
