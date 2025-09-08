@@ -40,7 +40,7 @@ const Node = ({ icon: Icon, label, desc, color }) => {
             {/* Tilted decorative layer (border, glow, gloss) - separate from content */}
             <motion.div
               className={cn(
-                "absolute inset-0 rounded-full border-[0.5px] flex items-center justify-center",
+                "absolute inset-0 rounded-full border-[0.25px] flex items-center justify-center",
                 "bg-gradient-to-br from-white/70 to-white/30 backdrop-blur-md",
                 "shadow-[inset_0_2px_6px_rgba(255,255,255,0.6),_0_4px_10px_rgba(0,0,0,0.12)]",
                 color.border
