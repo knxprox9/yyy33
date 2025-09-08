@@ -34,9 +34,7 @@ const Node = ({ icon: Icon, label, desc, color }) => {
             onMouseLeave={() => { if (timerRef.current) clearTimeout(timerRef.current); timerRef.current = setTimeout(() => setActive(false), HOLD_MS); }}
             onPointerDown={() => { setActive(true); if (timerRef.current) clearTimeout(timerRef.current); }}
             onPointerUp={() => { if (timerRef.current) clearTimeout(timerRef.current); timerRef.current = setTimeout(() => setActive(false), HOLD_MS); }}
-            onTouchStart={() => setActive(true)}
-            onTouchEnd={() => { if (timerRef.current) clearTimeout(timerRef.current); timerRef.current = setTimeout(() => setActive(false), HOLD_MS); }}
-            onClick={flash}
+            onPointerCancel={() => { if (timerRef.current) clearTimeout(timerRef.current); timerRef.current = setTimeout(() => setActive(false), HOLD_MS); }}
           >
             {/* Tilted decorative layer (border, glow, gloss) - separate from content */}
             <motion.div
