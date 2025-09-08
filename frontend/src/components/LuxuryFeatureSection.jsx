@@ -169,7 +169,7 @@ export default function LuxuryFeatureSection() {
         />
         {/* Animated shimmer line across rail (blue -&gt; purple -&gt; green -&gt; orange) */}
         <motion.div
-          className="pointer-events-none absolute left-3 right-3 top-8 h-[2px] rounded-full bg-gradient-to-r from-sky-400 via-violet-400 via-50% to-orange-400"
+          className="pointer-events-none absolute left-3 right-3 top-8 h-[2px] rounded-full opacity-50 bg-gradient-to-r from-sky-400 via-violet-400 via-50% to-orange-400"
           animate={{ backgroundPositionX: ["0%", "120%", "0%"] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           style={{ backgroundSize: "200% 100%" }}
