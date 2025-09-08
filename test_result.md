@@ -101,3 +101,63 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+## user_problem_statement: "Extract the uploaded ZIP archive into the root directory of the workspace, delete the original ZIP, and set the extracted content as the active working directory. Then install dependencies and start services."
+
+## backend:
+  - task: "Install backend dependencies and run backend via supervisor"
+    implemented: true
+    working: true
+    file: "backend/requirements.txt"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      -working: true
+       agent: "main"
+       comment: "Installed requirements (pip -r), restarted backend via supervisor. Health GET /api returned 200 with {\"message\":\"Hello World\"}."
+
+  - task: "Basic DB connectivity for /api/status insert and list"
+    implemented: false
+    working: "NA"
+    file: "backend/server.py"
+    stuck_count: 0
+    priority: "low"
+    needs_retesting: false
+    status_history:
+      -working: "NA"
+       agent: "main"
+       comment: "Not tested yet. MongoDB service is RUNNING and MONGO_URL, DB_NAME present in backend/.env."
+
+## frontend:
+  - task: "Install frontend dependencies and run dev server"
+    implemented: true
+    working: true
+    file: "frontend/package.json"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      -working: false
+       agent: "main"
+       comment: "Initial compile errors referencing framer-motion and styled-components resolved after node_modules linkage completed."
+      -working: true
+       agent: "main"
+       comment: "Frontend compiled successfully and is accessible. Screenshot captured of home page."
+
+## metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: true
+
+## test_plan:
+  current_focus:
+    - "Verify backend /api/status create and list endpoints against MongoDB"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+## agent_communication:
+  -agent: "main"
+   message: "ZIP extracted and deleted. Active working directory set to /app/frontend. Dependencies installed. Backend and frontend restarted via supervisor. Health checks passed. Awaiting next directives (e.g., run automated backend tests or additional features)."
