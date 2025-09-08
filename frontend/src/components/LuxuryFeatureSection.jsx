@@ -55,7 +55,7 @@ const Node = ({ icon: Icon, label, desc, color }) => {
               {/* Holographic outer aura */}
               <motion.div
                 aria-hidden
-                className="pointer-events-none absolute -inset-[3px] rounded-full opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-200"
+                className="pointer-events-none absolute -inset-[2px] rounded-full opacity-0 group-hover:opacity-60 group-active:opacity-60 transition-opacity duration-200"
                 style={{
                   background:
                     "conic-gradient(from 0deg, rgba(125,211,252,0.0), rgba(125,211,252,0.55), rgba(167,139,250,0.55), rgba(52,211,153,0.55), rgba(249,115,22,0.55), rgba(125,211,252,0.0))",
