@@ -30,7 +30,7 @@ const Node = ({ icon: Icon, label, desc, color }) => {
             className={cn(
               "group relative w-14 h-14",
             )}
-            onMouseEnter={() => { setActive(true); if (timerRef.current) clearTimeout(timerRef.current); timerRef.current = setTimeout(() => setActive(false), HOLD_MS); }}
+            onMouseEnter={() => { setActive(true); if (timerRef.current) clearTimeout(timerRef.current); }}
             onMouseLeave={() => { if (timerRef.current) clearTimeout(timerRef.current); timerRef.current = setTimeout(() => setActive(false), HOLD_MS); }}
             onPointerDown={() => setActive(true)}
             onPointerUp={() => { if (timerRef.current) clearTimeout(timerRef.current); timerRef.current = setTimeout(() => setActive(false), HOLD_MS); }}
