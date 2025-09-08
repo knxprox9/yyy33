@@ -6,7 +6,7 @@ import { Sparkles, Globe2, Layers, Wallet, Gamepad2, ShoppingBag, Percent } from
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
 import { cn } from "../lib/utils";
 
-const railGradient = "bg-gradient-to-r from-sky-400/40 via-violet-400/40 to-orange-400/40";
+const railGradient = "bg-gradient-to-r from-sky-400/20 via-violet-400/20 to-orange-400/20";
 
 // Node: circular semi-3D badge (tilt decorations + independent flip content)
 const Node = ({ icon: Icon, label, desc, color }) => {
