@@ -62,7 +62,7 @@ const Node = ({ icon: Icon, label, desc, color }) => {
                   filter: "blur(6px)",
                   opacity: active ? 1 : undefined,
                 }}
-                animate={{ opacity: active ? 0.6 : 0 }}
+                animate={{ opacity: active ? 0.35 : 0 }}
               />
 
               {/* Soft inner glow ring */}
