@@ -13,10 +13,11 @@ const Node = ({ icon: Icon, label, desc, color }) => {
   const [active, setActive] = useState(false);
   const timerRef = useRef(null);
 
-  const flash = () => {
+  const HOLD_MS = 1500;
+  const flash = (ms = HOLD_MS) => {
     setActive(true);
     if (timerRef.current) clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(() => setActive(false), 700);
+    timerRef.current = setTimeout(() => setActive(false), ms);
   };
 
   useEffect(() => () => { if (timerRef.current) clearTimeout(timerRef.current); }, []);
