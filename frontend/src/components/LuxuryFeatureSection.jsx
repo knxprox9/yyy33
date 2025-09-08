@@ -162,7 +162,7 @@ export default function LuxuryFeatureSection() {
       <div className="relative">
         <motion.div
           aria-hidden
-          className={cn("absolute -inset-x-6 -top-2 h-12 blur-md opacity-60", railGradient)}
+          className={cn("absolute -inset-x-6 -top-2 h-12 blur-sm opacity-40", railGradient)}
           animate={{ backgroundPositionX: ["0%", "100%", "0%"] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           style={{ backgroundSize: "200% 100%" }}
