@@ -32,7 +32,7 @@ const Node = ({ icon: Icon, label, desc, color }) => {
             onMouseEnter={() => { setActive(true); if (timerRef.current) clearTimeout(timerRef.current); }}
             onMouseLeave={() => { timerRef.current = setTimeout(() => setActive(false), 900); }}
             onPointerDown={() => setActive(true)}
-            onPointerUp={() => setActive(false)}
+            onPointerUp={() => { timerRef.current = setTimeout(() => setActive(false), 900); }}
             onTouchStart={() => setActive(true)}
             onTouchEnd={flash}
             onClick={flash}
