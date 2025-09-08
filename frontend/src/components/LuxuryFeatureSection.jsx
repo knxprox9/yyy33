@@ -30,7 +30,7 @@ const Node = ({ icon: Icon, label, desc, color }) => {
               "group relative w-14 h-14",
             )}
             onMouseEnter={() => { setActive(true); if (timerRef.current) clearTimeout(timerRef.current); }}
-            onMouseLeave={() => setActive(false)}
+            onMouseLeave={() => { timerRef.current = setTimeout(() => setActive(false), 900); }}
             onPointerDown={() => setActive(true)}
             onPointerUp={() => setActive(false)}
             onTouchStart={() => setActive(true)}
