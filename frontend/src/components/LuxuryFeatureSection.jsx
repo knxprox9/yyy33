@@ -96,7 +96,7 @@ const Node = ({ icon: Icon, label, desc, color }) => {
               animate={active ? { rotateY: 180 } : { rotateY: 0 }}
               whileHover={{ rotateY: 180 }}
               whileTap={{ rotateY: 180 }}
-              transition={{ type: "spring", stiffness: 220, damping: 18 }}
+              transition={{ type: "tween", duration: 0.9, ease: "easeInOut" }}
               style={{ transformStyle: "preserve-3d" }}
             >
               {/* Front side */}
