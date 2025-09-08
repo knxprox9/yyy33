@@ -50,7 +50,7 @@ const Node = ({ icon: Icon, label, desc, color }) => {
               animate={active ? { rotateZ: 12, scale: 1.06 } : { rotateZ: 0, scale: 1 }}
               whileHover={{ rotateZ: 12, scale: 1.06 }}
               whileTap={{ rotateZ: 15, scale: 1.08 }}
-              transition={{ type: "spring", stiffness: 220, damping: 18 }}
+              transition={{ type: "tween", duration: 0.9, ease: "easeInOut" }}
             >
               {/* Holographic outer aura */}
               <motion.div
