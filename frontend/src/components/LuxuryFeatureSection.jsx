@@ -34,7 +34,7 @@ const Node = ({ icon: Icon, label, desc, color }) => {
             onPointerDown={() => setActive(true)}
             onPointerUp={() => { timerRef.current = setTimeout(() => setActive(false), 1500); }}
             onTouchStart={() => setActive(true)}
-            onTouchEnd={() => { if (timerRef.current) clearTimeout(timerRef.current); timerRef.current = setTimeout(() => setActive(false), 900); }}
+            onTouchEnd={() => { if (timerRef.current) clearTimeout(timerRef.current); timerRef.current = setTimeout(() => setActive(false), 1500); }}
             onClick={flash}
           >
             {/* Tilted decorative layer (border, glow, gloss) - separate from content */}
