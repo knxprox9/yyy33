@@ -58,7 +58,7 @@ const Node = ({ icon: Icon, label, desc, color }) => {
                 className="pointer-events-none absolute -inset-[2px] rounded-full opacity-0 transition-opacity duration-200"
                 style={{
                   background:
-                    "conic-gradient(from 0deg, rgba(125,211,252,0.0), rgba(125,211,252,0.35), rgba(167,139,250,0.35), rgba(52,211,153,0.35), rgba(249,115,22,0.35), rgba(125,211,252,0.0))",
+                    "conic-gradient(from 0deg, rgba(125,211,252,0.0), rgba(125,211,252,0.2), rgba(167,139,250,0.2), rgba(52,211,153,0.2), rgba(249,115,22,0.2), rgba(125,211,252,0.0))",
                   filter: "blur(6px)",
                   opacity: active ? 1 : undefined,
                 }}
