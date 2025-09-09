@@ -130,7 +130,7 @@ const GlassTile = ({ icon: Icon, label, color }) => (
     <div className="mx-auto mb-1 flex h-[22px] w-[22px] items-center justify-center rounded-[6px] border bg-white/15">
       <Icon className={cn("h-3.5 w-3.5", color.icon)} />
     </div>
-    <div className="text-[11px] font-semibold text-slate-800 truncate" dir="rtl">
+    <div className="text-[10px] font-semibold text-slate-700 truncate" dir="rtl">
       {label}
     </div>
     {/* inner glow */}
