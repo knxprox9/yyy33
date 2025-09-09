@@ -127,7 +127,7 @@ const GlassTile = ({ icon: Icon, label, color }) => (
     whileHover={{ y: -2 }}
     transition={{ type: "spring", stiffness: 250, damping: 20 }}
   >
-    <div className="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full border bg-white/20">
+    <div className="mx-auto mb-1 flex h-[22px] w-[22px] items-center justify-center rounded-[6px] border bg-white/15">
       <Icon className={cn("h-4 w-4", color.icon)} />
     </div>
     <div className="text-[11px] font-semibold text-slate-800 truncate" dir="rtl">
